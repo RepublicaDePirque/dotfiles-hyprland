@@ -7,4 +7,8 @@ Acá están mis configuraciones para:
 - Waybar
 - Kitty
 - Fish
-- 
+- LazyVim
+- Wlogout
+- etc
+
+- No me acuerdo exactamente todo jdjdd, pero ahí ta todo
