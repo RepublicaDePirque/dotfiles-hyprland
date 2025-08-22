@@ -1,0 +1,100 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "modules-left": [
+        "hyprland/window",
+        "cpu",
+        "memory"
+
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "clock",
+        "tray",
+        "pulseaudio",
+        "battery",
+        "custom/power"
+    ],
+
+    // Módulos
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "active": "",   // círculo lleno para activo
+            "default": ""   // círculo vacío para el resto
+        },
+        "on-click": "hyprctl dispatch workspace {name}",
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
+    },
+
+    "hyprland/window": {
+        "format": "󰖯 {}",
+        "max-length": 50,
+        "tooltip": true,
+        "tooltip-format": "Ventana activa: {title}",
+        "on-click": "kitty -e ssh starwarstel.net"
+    },
+    "clock": {
+    "format": "{:%H:%M}",
+    "tooltip": true,
+    "tooltip-format": "{:%d-%m-%Y}"
+    },
+
+    "tray": {
+        "icon-size": 25,
+        "spacing": 8
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}% ",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "tooltip-format": "{icon} {desc}",
+        "on-click": "pavucontrol"
+    },
+    
+    "cpu": {
+        "format": "󰍛 {usage}%",
+        "tooltip": true,
+        "on-click": "kitty -e btop"
+    },
+
+    "memory": {
+        "format": " {percentage}%",
+        "tooltip": true,
+        "on-click": "kitty -e btop"
+    },
+
+    "battery": {
+        "states": {
+            "good": 90,
+            "warning": 30,
+            "critical": 14
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "custom/power": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": "Power Menu"
+    }
+}

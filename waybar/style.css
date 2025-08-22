@@ -1,0 +1,45 @@
+/* Estilos globales */
+* {
+    border-radius: 7px;
+    font-family: 'Martian Mono', monospace;
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+
+
+/* Contenedor de módulos (derecha e izquierda) */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#pulseaudio,
+#tray,
+#pulseaudio,
+#custom-power,
+#hyprland-workspaces,
+#window {
+    padding: 0 15px; /* Unificado el padding */
+    margin: 5px; /* Margen unificado para todos los módulos */
+    background-color: #303034; /* Color de fondo base */
+}
+
+/* Módulo de Workspaces */
+#workspaces button {
+    margin: 5px 3px; /* Más compacto y uniforme */
+    color: #5e6277; /* Color inactivo */
+    }
+
+#workspaces button.active {
+    color: #e36331; 
+}
+
+#workspaces button:hover {
+    color: #cdd6f4;
+}
+
